@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "esnext",
+    "outDir": "dist",
+    "moduleResolution": "node",
+    "allowJs": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": false,
+    "forceConsistentCasingInFileNames": true,
+    "sourceMap": true,
+    "paths": {
+      "@/*": [ "src/*" ]
+    }
+  },
+  "types": [ "node", "jest" ],
+  "ts-node": {
+    "require": ["tsconfig-paths/register"]
+  }
+}
