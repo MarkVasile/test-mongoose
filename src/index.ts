@@ -28,7 +28,7 @@ mongoose.connect(
     const db = mongoose.connection.db
     await db.collection('Repos').findOneAndUpdate({ origin, outsideSchema: 1 }, { $set: { o: 'BOOM !!' } })
     const repo = await Repo.findOne({ origin })
-    console.log('REPO after update', repo) // BAD: no errors, and we've found a repo that does not correspond to the query; check mongoose debug msg.
+    console.log('REPO after update', repo) // CORRECT: Repo unchanged.
   } catch (err) {
     console.error(new Error('could not find repo'))
     console.log(err)
